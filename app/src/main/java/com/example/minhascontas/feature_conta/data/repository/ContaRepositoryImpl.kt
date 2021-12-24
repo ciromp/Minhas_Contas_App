@@ -12,10 +12,10 @@ class ContaRepositoryImpl(
     override suspend fun getContaById(id: Int) = contaDao.getContaById(id)
 
     override suspend fun insertConta(conta: Conta) {
-        TODO("Not yet implemented")
+        contaDao.insertConta(conta)
     }
 
     override suspend fun deleteConta(conta: Conta) {
-        TODO("Not yet implemented")
+        contaDao.deleteConta(conta)
     }
 }
