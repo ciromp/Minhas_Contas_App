@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.example.minhascontas.feature_conta.data.data_source.ContaDatabase
 import com.example.minhascontas.feature_conta.data.repository.ContaRepository
 import com.example.minhascontas.feature_conta.data.repository.ContaRepositoryImpl
+import com.example.minhascontas.feature_conta.domain.use_case.AddContaUseCase
 import com.example.minhascontas.feature_conta.domain.use_case.ContaUseCases
 import com.example.minhascontas.feature_conta.domain.use_case.DeleteContaUseCase
 import com.example.minhascontas.feature_conta.domain.use_case.GetContasUseCase
@@ -39,7 +40,8 @@ object AppModule {
     fun provideContaUseCases(repository: ContaRepository): ContaUseCases {
         return ContaUseCases(
             getContasUseCase = GetContasUseCase(repository),
-            deleteContaUseCase = DeleteContaUseCase(repository)
+            deleteContaUseCase = DeleteContaUseCase(repository),
+            addContaUseCase = AddContaUseCase(repository)
         )
     }
 }

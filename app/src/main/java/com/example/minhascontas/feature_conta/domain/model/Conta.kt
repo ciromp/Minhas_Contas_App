@@ -3,6 +3,7 @@ package com.example.minhascontas.feature_conta.domain.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.minhascontas.ui.theme.*
+import java.lang.Exception
 
 @Entity
 data class Conta(
@@ -19,3 +20,5 @@ data class Conta(
         val contaColors = listOf(RedOrange, LightGreen, Violet, BabyBlue, RedPink)
     }
 }
+
+class InvalidContaException(message: String) : Exception(message)
