@@ -12,4 +12,8 @@ abstract class ContaDatabase: RoomDatabase() {
 
     abstract val contaDao: ContaDao
 
+    companion object {
+        const val DATABASE_NAME = "conta_db"
+    }
+
 }
